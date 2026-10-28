@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Progress | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+    <header class="navbar">
+        <a href="/" class="brand">
+            <span class="brand-icon">D</span>
+            <span>Daily Progress</span>
+        </a>
+
+        <div class="nav-actions">
+            <span id="todayLabel" class="today-label"></span>
+            <button id="logoutButton" class="button button-outline" type="button">
+                Log out
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-section">
+            <div>
+                <span class="eyebrow">YOUR PERSONAL WORKSPACE</span>
+                <h1>Welcome back, <span id="welcomeName">there</span>!</h1>
+                <p>Keep learning, stay consistent, and celebrate every achievement.</p>
+            </div>
+            <div class="welcome-symbol">✦</div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card streak-card">
+                <div class="stat-heading">
+                    <span>Current streak</span>
+                    <span class="stat-icon">🔥</span>
+                </div>
+                <div class="stat-number">
+                    <strong id="currentStreak">0</strong>
+                    <span>days</span>
+                </div>
+                <p>Keep your momentum going!</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-heading">
+                    <span>Completed tasks</span>
+                    <span class="stat-icon">✓</span>
+                </div>
+                <div class="stat-number">
+                    <strong id="completedTasks">0</strong>
+                </div>
+                <p>Every completed task counts.</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-heading">
+                    <span>Productive days</span>
+                    <span class="stat-icon">▦</span>
+                </div>
+                <div class="stat-number">
+                    <strong id="completedDays">0</strong>
+                </div>
+                <p>Days with completed tasks.</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-heading">
+                    <span>Longest streak</span>
+                    <span class="stat-icon">🏆</span>
+                </div>
+                <div class="stat-number">
+                    <strong id="longestStreak">0</strong>
+                    <span>days</span>
+                </div>
+                <p>Your personal best.</p>
+            </article>
+        </section>
+
+        <section class="content-grid">
+
+            <article class="panel task-form-panel">
+                <div class="panel-heading">
+                    <div>
+                        <span class="eyebrow">MAKE TODAY COUNT</span>
+                        <h2>Add a learning update</h2>
+                    </div>
+                    <span class="heading-symbol">＋</span>
+                </div>
+
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskDate">Task date</label>
+                        <input type="date" id="taskDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">What did you learn?</label>
+                        <input
+                            type="text"
+                            id="title"
+                            placeholder="e.g. Spring Data JPA"
+                            maxlength="150"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Your progress</label>
+                        <textarea
+                            id="description"
+                            rows="4"
+                            maxlength="3000"
+                            placeholder="Describe the concepts you learned or tasks you completed..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Task status</label>
+                        <select id="status">
+                            <option value="COMPLETED">Completed</option>
+                            <option value="IN_PROGRESS">In progress</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="saveButton" class="button button-primary full-width">
+                        Save daily update →
+                    </button>
+
+                    <p id="formMessage" class="message" role="status"></p>
+                </form>
+            </article>
+
+            <article class="panel history-panel">
+                <div class="panel-heading">
+                    <div>
+                        <span class="eyebrow">YOUR JOURNEY</span>
+                        <h2>Learning history</h2>
+                    </div>
+                    <span class="history-count" id="taskCount">0 tasks</span>
+                </div>
+
+                <div id="taskList" class="task-list" aria-live="polite">
+                    <div class="empty-state">
+                        <div class="empty-icon">✦</div>
+                        <h3>Loading your progress...</h3>
+                        <p>Your daily updates will appear here.</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <footer class="footer">
+            <p>Consistency beats perfection. Keep showing up. ✨</p>
+        </footer>
+
+    </main>
+</body>
+</html>

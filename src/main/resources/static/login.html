@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Daily Progress</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <main class="auth-layout">
+        <section class="auth-brand-panel">
+            <a href="/login.html" class="brand brand-light">
+                <span class="brand-icon">D</span>
+                <span>Daily Progress</span>
+            </a>
+
+            <div class="auth-promo">
+                <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+                <h1>Show up today.<br>Thank yourself tomorrow.</h1>
+                <p>Track what you learn, build meaningful habits, and keep your streak alive.</p>
+
+                <div class="promo-stat">
+                    <span class="promo-flame">🔥</span>
+                    <div>
+                        <strong>One day at a time.</strong>
+                        <p>Your progress is worth tracking.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="brand-footer">A little progress every day.</p>
+        </section>
+
+        <section class="auth-form-panel">
+            <div class="auth-form-container">
+                <span class="eyebrow">WELCOME BACK</span>
+                <h2>Log in to your account</h2>
+                <p class="auth-description">Pick up where you left off.</p>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            autocomplete="email"
+                            placeholder="you@example.com"
+                            maxlength="254"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            autocomplete="current-password"
+                            placeholder="Enter your password"
+                            required>
+                    </div>
+
+                    <button type="submit" id="loginButton" class="button button-primary full-width">
+                        Log in →
+                    </button>
+
+                    <p id="authMessage" class="message" role="status"></p>
+                </form>
+
+                <p class="auth-switch">
+                    Don't have an account?
+                    <a href="/signup.html">Create one</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
