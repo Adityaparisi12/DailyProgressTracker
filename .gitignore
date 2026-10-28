@@ -1,33 +1,52 @@
-HELP.md
+
+# Maven
 target/
 .mvn/wrapper/maven-wrapper.jar
+
+# Keep Maven build output inside source directories if needed
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
-.apt_generated
+# Spring Boot local configuration and secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+application-secret.properties
+
+# Eclipse / Spring Tool Suite
+.apt_generated/
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# Gradle
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
